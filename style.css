@@ -21,25 +21,36 @@ header h1 {
 }
 
 .nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0); /* keep fully transparent */
+}
 
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
 }
 
 nav a {
-  color: #ff7722;
+  color: #fff; /* white text */
+  background: #ff7722; /* saffron background for each anchor */
   text-decoration: none;
   margin: 0 8px;
-  font-size: 15px;
-  padding: 5px 10px;
-  border-radius: 15px;
-  transition: background-color 0.3s;
+  font-size: 18px; /* increased size */
+  padding: 8px 14px; /* slightly bigger clickable area */
+  border-radius: 12px;
+  transition: background-color 0.15s, transform 0.12s;
   font-family: "Modak", system-ui;
-  font-weight: 400;
-  font-style: normal;
+  font-weight: 700; /* bold text */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 nav a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  text-decoration: none;
+  background-color: #e05f00; /* slightly darker saffron on hover */
+  transform: translateY(-2px);
+  color: #fff;
 }
 
 #hero {
